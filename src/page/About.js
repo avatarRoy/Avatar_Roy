@@ -14,9 +14,15 @@ function About(){
     var NowPage  = 0;
 
     useEffect(() =>{
+        var ArrowButton = document.querySelectorAll('.arrow_button');
         $('.mutipage.center_page').on('click',function(e){
             e.target.classList.remove('center_page');
         });
+        for(var i=0;i<ArrowButton.length;i++){
+            ArrowButton[i].addEventListener('animationend',(e)=>{
+                e.currentTarget.style.animation = "";
+            });
+        }
     });
 
     function SortPage(){
@@ -38,15 +44,23 @@ function About(){
         });
     }
 
-    function ShiftBlock(arrow){
+    function ShiftBlock(arrow,e){
         switch(arrow){
             case 'Right':
-                if(NowPage > 0)
+                if(NowPage > 0){
                     NowPage --;
+                    ArrowShiftAnimation(e);
+                }else{
+                    ArrowStopAnimation(e);
+                }
             break;
             case "Left":
-                if(NowPage < PageArray.length -1)
+                if(NowPage < PageArray.length -1){
                     NowPage ++;
+                    ArrowShiftAnimation(e);
+                }else{
+                    ArrowStopAnimation(e);
+                }
             break;
             default:
             //do nothing
@@ -55,31 +69,31 @@ function About(){
         SortPage();
     }
 
-    function ShiftRight(e){
+    function ArrowShiftAnimation(e){
         var NowElement = e.currentTarget;
         NowElement.style.animation = "Shake 0.5s ease";
-        NowElement.addEventListener('animationend',()=>{
-          NowElement.style.animation = "";
-        });
-        ShiftBlock('Right');
+    }
+
+
+    function ArrowStopAnimation(e){
+        var NowElement = e.currentTarget;
+        NowElement.style.animation = "EndShake 0.5s ease";
+    }
+
+
+    function ShiftRight(e){
+        ShiftBlock('Right',e);
     }
 
     function ShiftLeft(e){
-
-        var NowElement = e.currentTarget;
-        NowElement.style.animation = "Shake 0.5s ease";
-        NowElement.addEventListener('animationend',()=>{
-          NowElement.style.animation = "";
-        });
-        ShiftBlock('Left');
-
+        ShiftBlock('Left',e);
     }
 
     return(
         <div>
-            <div class="Right_next"  onClick={ShiftRight}> &gt;&gt; </div>
-            <div class="Left_next"   onClick={ShiftLeft}>  &lt;&lt; </div>
-
+            <div class="Right_next arrow_button"  onClick={ShiftRight}> &gt;&gt; </div>
+            <div class="Left_next arrow_button"   onClick={ShiftLeft}>  &lt;&lt; </div>
+            <h1 class="About_header">Hi Here will show my introduction</h1>
             <Hobby />
             <Plan />
             <WorkExperience />
