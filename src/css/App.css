@@ -116,14 +116,14 @@
 }
 
 .Main-Page {
-  background-image: url('Image.jpg');
+  background-image: url('../Image.jpg');
   height: 90vh;
   width: 100%;
 }
 
 .Main-Content{
   overflow: hidden;
-  background: white;
+  background: #D4D4D4;
   height: 90vh;
   width: 80%;
   margin: auto;
@@ -136,8 +136,9 @@
   top:50%;
   height: 200px;
   width: 70px;
+  border-radius: 15px;
   position: absolute;
-  background: #888888;
+  background: rgb(112, 129, 112);
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -164,40 +165,67 @@
 }
 
 @keyframes EndShake{
-  0%{transform: rotate(20deg) translateY(-50%);}
-  25%{transform: rotate(-15deg) translateY(-50%);}
-  50%{transform: rotate(10deg) translateY(-50%);}
-  75%{transform: rotate(-5deg) translateY(-50%);}
-  100%{transform: rotate(0deg) translateY(-50%);}
+  0%{background:red;transform: rotate(20deg) translateY(-50%);}
+  25%{background:red;transform: rotate(-15deg) translateY(-50%);}
+  50%{background:red;transform: rotate(10deg) translateY(-50%);}
+  75%{background:red;transform: rotate(-5deg) translateY(-50%);}
+  100%{background:red;transform: rotate(0deg) translateY(-50%);}
 }
 
 .mutipage{
   z-index: 7;
   position: absolute;
-  background: rgb(115, 196, 243);
+  background-color: #D4D4D4;
   height: 90vh;
   width: 100%;
   transition: all 0.5s ease;
 }
 
 .mutipage.center_page{
+  background-color: white;
+  cursor: pointer;
+  border: solid;
   z-index: 4;
   transform: scale(0.4,0.4);
+  box-shadow: 10px 10px 5px #888888;
+}
+
+.Page_format > h1{
+  position: absolute;
+  left: 50%;
+  top: 10px;
+  text-align: center;
+  transition: all 0.5s ease;
+  transform: translate(-50%);
+}
+
+.Page_format > h1.small{
+  position: absolute;
+  text-align: center;
+  font-size: 100px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
 }
 
 .mutipage.left_1th_page{
+  background-color: white;
+  border: solid;
   z-index: 3;
   opacity: 0.4;
   transform: scale(0.4,0.4) translate(-60%,15%);
 }
 
 .mutipage.right_1th_page{
+  background-color: white;
+  border: solid;
   z-index: 3;
   opacity: 0.4;
   transform: scale(0.4,0.4) translate(60%,15%)
 }
 
 .right_close{
+  visibility: visible;
   position: absolute;
   bottom: 30px;
   left: 50%;
@@ -208,6 +236,11 @@
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  transform: translate(-50%);
+}
+
+.right_close.small{
+  visibility: hidden;
 }
 
 .right_close:hover{
@@ -215,7 +248,7 @@
 }
 
 .fa-redo-alt{
-  color: white;
+  color: rgb(48, 2, 2);
   font-size: 30px;
 }
 
@@ -224,4 +257,25 @@
   position: absolute;
   right: 50%;
   transform: translateX(50%);
+}
+
+.componet_content{
+  opacity: 1;
+  visibility: visible;
+  position: absolute;
+  left: 50%;
+  top:50%;
+  transform: translate(-50%,-50%);
+  padding-left: 160px;
+  padding-top: 30px;
+  height: 300px;
+  width: 600px;
+  background: #5BCE9E url(../image/img8.gif) no-repeat left bottom;
+  transition: all 0.5s ease;
+}
+
+.componet_content.small{
+  opacity: 0;
+  transform: translate(-50%,-50%);
+  visibility: hidden;
 }

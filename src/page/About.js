@@ -2,7 +2,6 @@ import React , { useEffect } from 'react';
 import Hobby from './About/Hobby';
 import Plan from './About/Plan';
 import WorkExperience from './About/WorkExperience';
-import '../App.css';
 import $ from 'jquery';
 
 function About(){
@@ -16,7 +15,13 @@ function About(){
     useEffect(() =>{
         var ArrowButton = document.querySelectorAll('.arrow_button');
         $('.mutipage.center_page').on('click',function(e){
-            e.target.classList.remove('center_page');
+            var center_page_title = PageArray[NowPage] +" > .Page_format > h1";
+            var center_back = PageArray[NowPage] +" > .right_close";
+            var center_content = PageArray[NowPage] + " > .Page_format > .componet_content";
+            $('.mutipage.center_page').removeClass('center_page');
+            $(center_page_title).removeClass('small');
+            $(center_back).removeClass('small');
+            $(center_content).removeClass('small');
         });
         for(var i=0;i<ArrowButton.length;i++){
             ArrowButton[i].addEventListener('animationend',(e)=>{
@@ -40,7 +45,13 @@ function About(){
             }
         }
         $('.mutipage.center_page').on('click',function(e){
-            e.target.classList.remove('center_page');
+            var center_page_title = PageArray[NowPage] +" > .Page_format > h1";
+            var center_back = PageArray[NowPage] +" > .right_close";
+            var center_content = PageArray[NowPage] + " > .Page_format > .componet_content";
+            $('.mutipage.center_page').removeClass('center_page');
+            $(center_page_title).removeClass('small');
+            $(center_back).removeClass('small');
+            $(center_content).removeClass('small');
         });
     }
 
@@ -93,7 +104,10 @@ function About(){
         <div>
             <div class="Right_next arrow_button"  onClick={ShiftRight}> &gt;&gt; </div>
             <div class="Left_next arrow_button"   onClick={ShiftLeft}>  &lt;&lt; </div>
-            <h1 class="About_header">Hi Here will show my introduction</h1>
+            <div class="About_header">
+            <h1 >About</h1>
+            <small>Hi 這邊你可以看到一些關於我的資訊</small>
+            </div>
             <Hobby />
             <Plan />
             <WorkExperience />
