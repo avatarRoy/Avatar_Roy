@@ -102,8 +102,8 @@ function About(){
 
     return(
         <div>
-            <div class="Right_next arrow_button"  onClick={ShiftRight}> &gt;&gt; </div>
-            <div class="Left_next arrow_button"   onClick={ShiftLeft}>  &lt;&lt; </div>
+            <div class="Left_next arrow_button"  onClick={ShiftRight}> &lt;&lt; </div>
+            <div class="Right_next arrow_button"   onClick={ShiftLeft}>  &gt;&gt; </div>
             <div class="About_header">
             <h1 >About</h1>
             <small>Hi 這邊你可以看到一些關於我的資訊</small>
