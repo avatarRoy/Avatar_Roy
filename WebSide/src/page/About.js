@@ -56,6 +56,13 @@ function About(){
     }
 
     function ShiftBlock(arrow,e){
+        fetch('http://localhost:8080/api');/*.then(
+            res => res.json()
+        ).then(
+            data => {
+                console.log(data);
+            }
+        );*/
         switch(arrow){
             case 'Right':
                 if(NowPage > 0){
