@@ -56,7 +56,7 @@ function About(){
     }
 
     function ShiftBlock(arrow,e){
-        fetch('http://localhost:8080/api');/*.then(
+        fetch('http://localhost:8080/api/TEST');/*.then(
             res => res.json()
         ).then(
             data => {
