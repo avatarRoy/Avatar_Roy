@@ -56,7 +56,8 @@ function About(){
     }
 
     function ShiftBlock(arrow,e){
-        fetch('http://localhost:8080/api/TEST');/*.then(
+        var Burl =  "/api/TEST";
+        fetch(Burl);/*.then(
             res => res.json()
         ).then(
             data => {
