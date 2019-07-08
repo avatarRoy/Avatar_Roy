@@ -28,8 +28,8 @@ function Hobby() {
                     又或者腦袋放空拿著魔術方塊轉轉，<br />
                     至於最近對寫HTML、javascript、css覺得蠻有趣的<br />
                     就開始閒暇時加減研究<br />
-                    這個網站就是用下班閒暇之餘做出來的。<br />
-                    前端用 react.js 後端用 golang 而database 則是使用MongoDB<br />
+                    這個網站就是用下班閒暇之餘，試著用react.js做出來。<br />
+                    之後計劃研究後端相關的語言與實做 <br />
                     雖然看起來還有有點兩光，但希望能夠慢慢得把他改好囉。<br />
                     </p>
                 </div>

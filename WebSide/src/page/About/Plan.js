@@ -22,8 +22,8 @@ function Plan() {
                     <p>
                     
                         相關知識 :<br />
-                        C、Linux、jQuery、HTML、JavaScript、AJAX、嵌入式系統設計，嵌入式Linux，backbone.js，Restful api，以及最近再研究的react.js golang	<br />
-                        <br />
+                        C、Linux、jQuery、HTML、JavaScript、AJAX、嵌入式系統設計，嵌入式Linux，backbone.js，Restful api，以及最近再研究的react.js 	<br />
+                        以及之後計畫的PHP之類的後端語言<br />
                         語言能力 :<br />
                         英文差不多多益400分<br/>
                         能夠勉強和外國人溝通的程度<br/>

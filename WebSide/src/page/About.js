@@ -2,12 +2,14 @@ import React , { useEffect } from 'react';
 import Hobby from './About/Hobby';
 import Plan from './About/Plan';
 import WorkExperience from './About/WorkExperience';
+import Experience from './About/Experience';
 import $ from 'jquery';
 
 function About(){
     const PageArray = [
         ".Hobby",
         ".Plan",
+		".Experience",
         ".WorkExperience"
     ];
     var NowPage  = 0;
@@ -118,6 +120,7 @@ function About(){
             </div>
             <Hobby />
             <Plan />
+			<Experience />
             <WorkExperience />
         </div>
     );
