@@ -1,5 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import Cube from './image/cube.jpg';
 //import Buger from './Buger';
 
 function Nav(){
@@ -19,13 +20,13 @@ function Nav(){
 */
     return(
         <nav class="Nav">
-            <div><h3>Logo</h3></div>
+            <div class="Vcube"><img src={Cube}></img></div>
             <div class="Detail-item">
-                <div class="Nav-item"> 
-                    <Link to="/About"><i class="fas fa-address-card"></i> &nbsp; About</Link>
+				<div class="Nav-item"> 
+                    <Link to="/"><i class="fa fa-home"></i> &nbsp; Home</Link>
                 </div>
                 <div class="Nav-item"> 
-                    <Link to="#Blog"><i class="fa fa-home"></i>Blog</Link>
+                    <Link to="/About"><i class="fas fa-address-card"></i> &nbsp; About</Link>
                 </div>
             </div>
         </nav>

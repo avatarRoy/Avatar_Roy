@@ -4,6 +4,17 @@
 
 }
 
+.Vcube{
+	height:50px;
+	width:50px;
+}
+
+.Vcube img{
+	border-radius: 50%;
+	height:100%;
+	width:100%;
+}
+
 .Nav{
   display:flex;
   justify-content: space-around;
@@ -207,18 +218,18 @@
 }
 
 .mutipage.left_1th_page{
+  opacity: 0.4;
   background-color: white;
   border: solid;
   z-index: 3;
-  opacity: 0.4;
   transform: scale(0.4,0.4) translate(-60%,15%);
 }
 
 .mutipage.right_1th_page{
+  opacity: 0.4;
   background-color: white;
   border: solid;
   z-index: 3;
-  opacity: 0.4;
   transform: scale(0.4,0.4) translate(60%,15%)
 }
 
@@ -276,7 +287,7 @@
   opacity: 1;
   position: absolute;
   transform: translate(-50%,-50%);
-  padding-left: 160px;
+  padding-left: 190px;
   padding-top: 30px;
   height: auto;
   width: 600px;
