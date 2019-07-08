@@ -56,8 +56,8 @@ function About(){
     }
 
     function ShiftBlock(arrow,e){
-        var Burl =  "/api/TEST";
-        fetch(Burl);/*.then(
+/*        var Burl =  "/api/TEST";
+        fetch(Burl);.then(
             res => res.json()
         ).then(
             data => {
