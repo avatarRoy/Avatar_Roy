@@ -1,6 +1,12 @@
 import About from './page/About'
-
+import Main from './page/Main'
+ 
 const router =[
+    {
+        path:"/",
+        exact:true,
+        component:Main,
+    },
     {
         path:"/About",
         exact:true,

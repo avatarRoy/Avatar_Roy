@@ -4,6 +4,21 @@
 
 }
 
+.MyPicture{
+  top: 10%;
+  left: 15%;
+  position: absolute;
+  height: 400px;
+  width: 400px;
+}
+
+.MyPicture img{
+  height: 100%;
+  width: 100%;
+  border-radius: 25px;
+  box-shadow: 10px 10px 5px #888888;
+}
+
 .Vcube{
 	height:50px;
 	width:50px;
