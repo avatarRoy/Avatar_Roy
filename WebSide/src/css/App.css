@@ -4,19 +4,43 @@
 
 }
 
+.MainPage{
+  border-radius:30px;
+  margin: 8% auto;
+  height: 70%;
+  width: 70%;
+  background-color: #fcebeb;
+  box-shadow: 10px 10px 5px #888888;
+  position: relative;
+}
+
+.MinDes{
+  height: 80%;
+  width: 50%;
+  background: rgb(229, 235, 232);
+  position: absolute;
+  left: 50%;
+  top: 10%;
+  display: table;
+}
+
+.MinDes p{
+  text-align: center;
+  vertical-align: middle;
+  display: table-cell;
+}
+
 .MyPicture{
   top: 10%;
-  left: 15%;
+  left: 8%;
   position: absolute;
-  height: 400px;
-  width: 400px;
+  height: 73%;
+  width: 36%;
 }
 
 .MyPicture img{
   height: 100%;
   width: 100%;
-  border-radius: 25px;
-  box-shadow: 10px 10px 5px #888888;
 }
 
 .Vcube{
@@ -147,7 +171,7 @@
 
 .Main-Content{
   overflow: hidden;
-  background: #D4D4D4;
+  background: #98B3C2;
   height: 90vh;
   width: 80%;
   margin: auto;
