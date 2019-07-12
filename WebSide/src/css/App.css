@@ -30,17 +30,35 @@
 }
 
 .MyPicture{
-  top: 10%;
+  top: 8%;
   left: 8%;
   position: absolute;
   height: 73%;
   width: 36%;
 }
 
-.MyPicture img{
-  height: 100%;
-  width: 100%;
+.main_next{
+  position: absolute;
+  top:50%;
+  right: -10%;
+  cursor: pointer;
+  transition: all 2s ease;
 }
+
+.MyPicture img{
+  box-shadow: 10px 10px 10px #888;
+  width: 90%;
+  opacity: 1;
+  transition: all 1s ease;
+  transform: translate(0%,0%);
+  position: absolute;
+}
+
+.MyPicture img.but{
+  opacity: 0;
+  transform: translate(0%,-20%);
+}
+
 
 .Vcube{
 	height:50px;
@@ -343,4 +361,15 @@
   position: absolute;
   right: -330px;
   top:50%;
+}
+
+@media screen and (max-width:720px){
+  .RWDhide{
+      height: 100%;
+      width: 100%;
+      display:block; 
+  }
+  #root{
+    display:none;
+  }
 }

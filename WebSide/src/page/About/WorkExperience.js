@@ -37,7 +37,6 @@ function WorkExperience() {
                 <div class="bk_image under">
                     <p>test</p>
                 </div>
-                <div class="bk_image_next" onClick={NextPage}><i class="fas fa-angle-double-up"></i></div>
             </div>
 
         </div>
