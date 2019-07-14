@@ -17,7 +17,7 @@ function Main(){
 
             <div class="MinDes">
                 <p>
-                Hi~<br />
+                Hi~~<br /><br />
                 這是一個半成品的靜態網站<br />
                 在找到相關工作前<br />
                 我會持續更新<br />

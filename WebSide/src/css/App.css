@@ -12,6 +12,7 @@
   background-color: #fcebeb;
   box-shadow: 10px 10px 5px #888888;
   position: relative;
+  overflow: auto;
 }
 
 .MinDes{
@@ -331,6 +332,8 @@
   left: 50%;
   top:50%;
   transition: all 0.5s ease;
+  height: 100%;
+  width: 100%;
 }
 
 .componet_content.small{
@@ -345,11 +348,12 @@
   transform: translate(-50%,-50%);
   padding-left: 190px;
   padding-top: 30px;
-  height: auto;
-  width: 600px;
+  height: 45%;
+  width: 50%;
   background: #5BCE9E url(../image/img8.gif) no-repeat left bottom;
   word-break: break-all;
   transition: all 0.5s ease;
+  overflow: auto;
 }
 
 .bk_image.under{
@@ -371,5 +375,11 @@
   }
   #root{
     display:none;
+  }
+}
+
+@media screen and (min-width:720px){
+  .RWDhide{
+    display: none;
   }
 }

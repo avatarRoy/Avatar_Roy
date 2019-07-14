@@ -34,9 +34,6 @@ function WorkExperience() {
 大學畢業並退伍後，花了點時間在找工作，了解到自己在專業方面知識與能力的不足，在網路上找到了政府的相關職業訓練，便進入了資策會這個訓練機構，希望能夠藉由這個地方，補足自己不足的知識與能力，於資策會結訓後，因緣際會下進入了AMI  這間公司，負責IPMI相關的前端後部分後端，這期間接觸過的程式語言C和一些java，並熟悉linux  環境，以及jquery、backbone.js、restful  api  等等 
                     </p>
                 </div>
-                <div class="bk_image under">
-                    <p>test</p>
-                </div>
             </div>
 
         </div>
