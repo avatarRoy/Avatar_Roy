@@ -116,7 +116,9 @@ function About(){
             <div class="Right_next arrow_button"   onClick={ShiftLeft}>  &gt;&gt; </div>
             <div class="About_header">
             <h1 >About</h1>
-            <small>Hi 這邊你可以看到一些關於我的資訊</small>
+            <small>Hi 這邊你可以看到一些關於我的資訊<br /></small>
+			<small>Mail : mynameisroy89@gmail.com <br /></small>
+			<small>Phone: 0919214765</small>
             </div>
             <Hobby />
             <Plan />
