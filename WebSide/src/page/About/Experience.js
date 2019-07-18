@@ -23,8 +23,8 @@ function Plan() {
 					2013 &#9; &#9;畢業於中華科技大學電子工程系<br />
 					2014 &#9; &#9;海軍役畢<br />
 					2015 &#9; &#9;資策會嵌入式系統結訓<br />
-					2015-2018 &#9;AMI 美商安邁助理工程師 負責Server BMC 相關前後端處理<br />
-					2018-2019 &#9;Lanner 立端科技工程師  負責Server BMC 相關前後端處理<br />
+					2015-2018 &#9;AMI 美商安邁助理工程師 負責Server BMC 相關Ipmi OEM , bug處理<br />
+					2018-2019 &#9;Lanner 立端科技工程師  負責Server BMC 相關Ipmi OEM , bug處理<br />
                     </p>
                 </div>
             </div>
