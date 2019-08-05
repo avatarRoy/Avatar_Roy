@@ -3,6 +3,7 @@ import Hobby from './About/Hobby';
 import Plan from './About/Plan';
 import WorkExperience from './About/WorkExperience';
 import Experience from './About/Experience';
+import MovePage from './About/MovePage';
 import $ from 'jquery';
 
 function About(){
@@ -120,7 +121,7 @@ function About(){
 			<small>Mail : mynameisroy89@gmail.com <br /></small>
 			<small>Phone: 0919214765</small>
             </div>
-            <Hobby />
+			<MovePage Title="TEST" Content="TEST" ClassName="Hobby" Local="center_page"/>
             <Plan />
 			<Experience />
             <WorkExperience />
