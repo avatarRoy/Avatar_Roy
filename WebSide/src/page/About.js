@@ -7,7 +7,7 @@ import MovePage from './About/MovePage';
 import $ from 'jquery';
 
 function About(){
-    const PageArray = [
+    const InitPageClass = [
         ".Hobby",
         ".Plan",
 		".Experience",
@@ -16,6 +16,7 @@ function About(){
     var NowPage  = 0;
 	const InitPage = [{Id:0,Title:"",ClassName:"",Content:""}];
 	const[JsonData,setJsonData] = useState(InitPage);
+	const[PageArray,setPageArray] = useState(InitPageClass);
 
     useEffect(() =>{
         var ArrowButton = document.querySelectorAll('.arrow_button');
@@ -33,15 +34,19 @@ function About(){
                 e.currentTarget.style.animation = "";
             });
         }
-		alert($('.mutipage').length);
     });
 
 	useEffect(() =>{
-		var Burl =  "/api/TEST";
+        var Burl =  "/api/TEST";
+        var TempArray = [];
         fetch(Burl).then((res) => {
             return res.json();
         }).then((data) =>{ 
             setJsonData(data);
+            for(var i=0;i<data.length;i++){
+                TempArray[i] = "." + data[i].ClassName;
+            }
+            setPageArray(TempArray);
         });
 	},([]));
 
@@ -126,14 +131,11 @@ function About(){
 			<small>Mail : mynameisroy89@gmail.com <br /></small>
 			<small>Phone: 0919214765</small>
             </div>
-			{
-				JsonData.map(data =>
-						<MovePage key={data.ClassName} Title={data.Title} Content={data.Content} ClassName={data.ClassName} Local="center_page"/>
-				)
-			}
-            <Plan />
-			<Experience />
-            <WorkExperience />
+            {
+                JsonData.map(data =>
+                    <MovePage key={data.ClassName} Title={data.Title} Content={data.Content} ClassName={data.ClassName} Local="center_page"/>
+                )
+            }
         </div>
     );
 
