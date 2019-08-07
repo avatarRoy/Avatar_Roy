@@ -7,10 +7,10 @@ import (
 	_ "github.com/go-sql-driver/mysql"
 	"log"
 	"net/http"
+	"strings"
 )
 
 type MovePageInfo struct {
-	Id        int
 	Title     string
 	ClassName string
 	Content   string
@@ -23,7 +23,6 @@ func checkErr(err error) {
 }
 
 func TEST(w http.ResponseWriter, r *http.Request) {
-	var Id int
 	var Title string
 	var ClassName string
 	var Content string
@@ -34,7 +33,7 @@ func TEST(w http.ResponseWriter, r *http.Request) {
 		log.Fatal(err)
 	}
 
-	row, err := db.Query("SELECT id,Title,ClassName,Content FROM Info")
+	row, err := db.Query("SELECT Title,ClassName,Content FROM Info")
 
 	if err != nil {
 		log.Fatal(err)
@@ -44,16 +43,14 @@ func TEST(w http.ResponseWriter, r *http.Request) {
 	JsonArray := []*MovePageInfo{}
 	for row.Next() {
 
-		err = row.Scan(&Id, &Title, &ClassName, &Content)
+		err = row.Scan( &Title, &ClassName, &Content)
 		if err != nil {
 			log.Fatal(err)
 		}
-		fmt.Println(Id)
 		fmt.Println(Title)
 		fmt.Println(ClassName)
 		fmt.Println(Content)
 		Info := new(MovePageInfo)
-		Info.Id = Id
 		Info.Title = Title
 		Info.ClassName = ClassName
 		Info.Content = Content

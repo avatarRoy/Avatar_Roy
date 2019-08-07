@@ -6,7 +6,12 @@ function MovePage({Title,Content,ClassName,Local}) {
 	const [CLASS,setCLASS] = useState('class');
 
 	useEffect(() => {
-		var CLASS_NAME = ClassName + " mutipage " + Local;
+		if(Local == 0){
+			Location = "center_page";
+		}else{
+			Location = "right_1th_page";
+		}
+		var CLASS_NAME = ClassName + " mutipage " + Location;
 		setCLASS(CLASS_NAME);
 	},([]));
 

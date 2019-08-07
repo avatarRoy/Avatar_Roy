@@ -10,8 +10,8 @@ function About(){
     const InitPageClass = [
         ".Hobby",
         ".Plan",
-		".Experience",
-        ".WorkExperience"
+        ".Experience",
+        ".WorkExperience",
     ];
     var NowPage  = 0;
 	const InitPage = [{Id:0,Title:"",ClassName:"",Content:""}];
@@ -68,7 +68,7 @@ function About(){
             var center_page_title = PageArray[NowPage] +" > .Page_format > h1";
             var center_back = PageArray[NowPage] +" > .right_close";
             var center_content = PageArray[NowPage] + " > .Page_format > .componet_content";
-            ('.mutipage.center_page').removeClass('center_page');
+            $('.mutipage.center_page').removeClass('center_page');
             $(center_page_title).removeClass('small');
             $(center_back).removeClass('small');
             $(center_content).removeClass('small');
@@ -76,7 +76,6 @@ function About(){
     }
 
     function ShiftBlock(arrow,e){
-		console.log(JsonData);
         switch(arrow){
             case 'Right':
                 if(NowPage > 0){
@@ -132,9 +131,9 @@ function About(){
 			<small>Phone: 0919214765</small>
             </div>
             {
-                JsonData.map(data =>
-                    <MovePage key={data.ClassName} Title={data.Title} Content={data.Content} ClassName={data.ClassName} Local="center_page"/>
-                )
+                JsonData.map((data,index) =>{
+                    return	<MovePage key={data.ClassName} Title={data.Title} Content={data.Content} ClassName={data.ClassName} Local={index} />
+                })
             }
         </div>
     );
