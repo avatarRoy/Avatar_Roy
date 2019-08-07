@@ -1,4 +1,4 @@
-import React , { useEffect } from 'react';
+import React , { useEffect ,useState} from 'react';
 import Hobby from './About/Hobby';
 import Plan from './About/Plan';
 import WorkExperience from './About/WorkExperience';
@@ -14,6 +14,8 @@ function About(){
         ".WorkExperience"
     ];
     var NowPage  = 0;
+	const InitPage = [{Id:0,Title:"",ClassName:"",Content:""}];
+	const[JsonData,setJsonData] = useState(InitPage);
 
     useEffect(() =>{
         var ArrowButton = document.querySelectorAll('.arrow_button');
@@ -31,7 +33,17 @@ function About(){
                 e.currentTarget.style.animation = "";
             });
         }
+		alert($('.mutipage').length);
     });
+
+	useEffect(() =>{
+		var Burl =  "/api/TEST";
+        fetch(Burl).then((res) => {
+            return res.json();
+        }).then((data) =>{ 
+            setJsonData(data);
+        });
+	},([]));
 
     function SortPage(){
         $('.mutipage.center_page').unbind('click');
@@ -51,7 +63,7 @@ function About(){
             var center_page_title = PageArray[NowPage] +" > .Page_format > h1";
             var center_back = PageArray[NowPage] +" > .right_close";
             var center_content = PageArray[NowPage] + " > .Page_format > .componet_content";
-            $('.mutipage.center_page').removeClass('center_page');
+            ('.mutipage.center_page').removeClass('center_page');
             $(center_page_title).removeClass('small');
             $(center_back).removeClass('small');
             $(center_content).removeClass('small');
@@ -59,14 +71,7 @@ function About(){
     }
 
     function ShiftBlock(arrow,e){
-/*        var Burl =  "/api/TEST";
-        fetch(Burl);.then(
-            res => res.json()
-        ).then(
-            data => {
-                console.log(data);
-            }
-        );*/
+		console.log(JsonData);
         switch(arrow){
             case 'Right':
                 if(NowPage > 0){
@@ -121,7 +126,11 @@ function About(){
 			<small>Mail : mynameisroy89@gmail.com <br /></small>
 			<small>Phone: 0919214765</small>
             </div>
-			<MovePage Title="TEST" Content="TEST" ClassName="Hobby" Local="center_page"/>
+			{
+				JsonData.map(data =>
+						<MovePage key={data.ClassName} Title={data.Title} Content={data.Content} ClassName={data.ClassName} Local="center_page"/>
+				)
+			}
             <Plan />
 			<Experience />
             <WorkExperience />
