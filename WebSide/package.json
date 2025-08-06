@@ -7,7 +7,7 @@
     "react-dom": "^16.8.6",
     "react-router-config": "^5.0.1",
     "react-router-hash-link": "^1.2.1",
-    "react-scripts": "3.0.1"
+    "react-scripts": "5.0.1"
   },
   "scripts": {
     "WB": "webpack --mode production",
